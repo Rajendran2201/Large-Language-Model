@@ -1,0 +1,66 @@
+
+Setting up a virtual environment 
+
+----- For MacOS 
+{
+python3 -m venv llm_workshop
+source llm_workshop/bin/activate
+}
+
+----- For Windows 
+{
+python -m venv llm_workshop
+.\llm_worksop\Scripts\activate
+
+(
+  This is causes an error if Scripts are restricted in your system.
+  In such cases, open power shell in your PC and type { Get-ExecutionPolicy }
+  if it shows as "Restricted" then type
+    { Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass }
+    
+)
+}
+
+
+-------- Install the following dependencies ---------
+
+--- For Windows 
+
+{
+
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cull8
+pip install openai==0.28
+pip install backoff
+pip install transformers bitsandbytes>=0.39.0 -q
+pip install accelerate 
+pip install transformers 
+pip install sentencepiece 
+pip install tiktoken
+pip install scikit-learn
+pip install matplotlib
+pip install plotly
+
+}
+
+
+----For macOS 
+
+{
+
+pip3 install torch torchvision torchaudio
+
+pip3 install openai==0.28
+pip3 install backoff
+pip3 install transformers bitsandbytes>=0.39.0 -q
+pip3 install accelerate 
+pip3 install transformers 
+pip3 install sentencepiece 
+pip3 install tiktoken
+pip3 install scikit-learn
+pip3 install matplotlib
+pip3 install plotly
+
+}
+
+------------------------------------------------------
+
